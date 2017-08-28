@@ -511,15 +511,6 @@ inoremap <C-t>     <Esc><C-w>T<CR>
 " 设置最大打开标签页的数量,默认是10个
 set tabpagemax=15
 
-"python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
 
 " => 选中及操作改键
 
