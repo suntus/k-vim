@@ -661,6 +661,7 @@ hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=
 " nmap <F9> :TagbarToggle<CR>
 nmap <leader>l : TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+" 默认不排序
 let g:tagbar_sort = 0
 " let g:tagbar_autoshowtag = 1
 " let g:tagbar_show_visibility = 1
