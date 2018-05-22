@@ -45,7 +45,7 @@ endif
 " 代码自动补全
 " 迄今为止用到的最好的自动VIM自动补全插件
 " 重启 :YcmRestartServer
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 " 自动补全单引号，双引号等
 " Plug 'Raimondi/delimitMate'
 " 自动补全html/xml标签
@@ -661,6 +661,7 @@ hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=
 " nmap <F9> :TagbarToggle<CR>
 nmap <leader>l : TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
 " let g:tagbar_autoshowtag = 1
 " let g:tagbar_show_visibility = 1
 " for ruby

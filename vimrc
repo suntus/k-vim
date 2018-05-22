@@ -153,7 +153,8 @@ set foldenable
 " syntax    使用语法定义折叠
 " diff      对没有更改的文本进行折叠
 " marker    使用标记进行折叠, 默认标记是 {{{ 和 }}}
-set foldmethod=indent
+" set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
 " 代码折叠自定义快捷键 <leader>zz
 let g:FoldMethod = 0
@@ -198,20 +199,20 @@ set ttyfast
 set nrformats=
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
-set relativenumber number
-au FocusLost * :set norelativenumber number
-au FocusGained * :set relativenumber
+" set relativenumber number
+" au FocusLost * :set norelativenumber number
+" au FocusGained * :set relativenumber
 " 插入模式下用绝对行号, 普通模式下用相对
-autocmd InsertEnter * :set norelativenumber number
-autocmd InsertLeave * :set relativenumber
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber number
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
+" autocmd InsertEnter * :set norelativenumber number
+" autocmd InsertLeave * :set relativenumber
+" function! NumberToggle()
+  " if(&relativenumber == 1)
+    " set norelativenumber number
+  " else
+    " set relativenumber
+  " endif
+" endfunc
+" nnoremap <C-n> :call NumberToggle()<cr>
 
 " 防止tmux下vim的背景色显示异常
 " Refer: http://sunaku.github.io/vim-256color-bce.html
@@ -317,14 +318,14 @@ noremap <F1> <Esc>"
 " F2 行号开关，用于鼠标复制代码用
 " 为方便复制，用<F2>开启/关闭行号显示:
 function! HideNumber()
-  if(&relativenumber == &number)
-    set relativenumber! number!
-  elseif(&number)
-    set number!
-  else
-    set relativenumber!
-  endif
-  set number?
+  " if(&relativenumber == &number)
+    " set relativenumber! number!
+  " elseif(&number)
+    " set number!
+  " else
+    " set relativenumber!
+  " endif
+  set number!
 endfunc
 nnoremap <F2> :call HideNumber()<CR>
 " F3 显示可打印字符开关
@@ -641,8 +642,8 @@ endif
 set background=dark
 set t_Co=256
 
-colorscheme solarized
-" colorscheme molokai
+" colorscheme solarized
+colorscheme molokai
 " colorscheme desert
 
 
