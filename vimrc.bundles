@@ -511,7 +511,10 @@ let g:ctrlp_extensions = ['funky']
 
 
 " ctrlsf {{{
+" 全局搜索当前单词
 nmap \ <Plug>CtrlSFCwordPath<CR>
+" 全局搜索
+nnoremap <leader>ff :CtrlSF<space>
 " let g:ctrlsf_position = 'below'
 " let g:ctrlsf_winsize = '30%'
 let g:ctrlsf_auto_close = 0
