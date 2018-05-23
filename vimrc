@@ -144,8 +144,6 @@ set ignorecase
 " 有一个或以上大写字母时仍大小写敏感
 set smartcase
 
-" 代码折叠
-set foldenable
 " 折叠方法
 " manual    手工折叠
 " indent    使用缩进表示折叠
@@ -153,8 +151,8 @@ set foldenable
 " syntax    使用语法定义折叠
 " diff      对没有更改的文本进行折叠
 " marker    使用标记进行折叠, 默认标记是 {{{ 和 }}}
-" set foldmethod=indent
-set foldmethod=syntax
+set foldmethod=indent
+" set foldmethod=syntax
 set foldlevel=99
 " 代码折叠自定义快捷键 <leader>zz
 let g:FoldMethod = 0
@@ -168,6 +166,9 @@ fun! ToggleFold()
         let g:FoldMethod = 0
     endif
 endfun
+
+" 代码折叠
+set foldenable
 
 " 缩进配置
 " Smart indent
