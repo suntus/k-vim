@@ -58,6 +58,9 @@ Plug 'shougo/neocomplete.vim'
 " 快速注释
 Plug 'scrooloose/nerdcommenter'
 
+" 添加函数注释
+Plug 'vim-scripts/DoxygenToolkit.vim'
+
 
 " 快速加入修改环绕字符
 " for repeat -> enhance surround.vim, . to repeat command
@@ -488,6 +491,9 @@ let g:closetag_html_style=1
 " nerdcommenter {{{
 let g:NERDSpaceDelims=1
 let g:NERDAltDelims_python = 1
+" }}}
+" DoxygenToolkit {{{
+map <leader>b :Dox<cr>
 " }}}
 
 " trailingwhitespace {{{
