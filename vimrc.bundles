@@ -608,6 +608,7 @@ nnoremap <leader>ff :CtrlSF<space>
 " let g:ctrlsf_winsize = '30%'
 let g:ctrlsf_auto_close = 0
 let g:ctrlsf_confirm_save = 0
+let g:ctrlsf_ignore_dir = ["tags"]
 " Note: cannot use <CR> or <C-m> for open
 " Use : <sapce> or <tab>
 let g:ctrlsf_mapping = {
@@ -642,7 +643,7 @@ nnoremap <leader>ge :Gdiff<CR>
 " 只是不喜欢除了行号多一列, 默认关闭,gs时打开
 let g:gitgutter_map_keys = 0
 let g:gitgutter_enabled = 0
-let g:gitgutter_highlight_lines = 1
+let g:gitgutter_highlight_lines = 0
 nnoremap <leader>gs :GitGutterToggle<CR>
 " }}}
 
