@@ -48,7 +48,7 @@ endif
 Plug 'Valloric/YouCompleteMe'
 
 " 使用neo补全
-"Plug 'shougo/neocomplete.vim'
+" Plug 'shougo/neocomplete.vim'
 " 自动补全单引号，双引号等
  Plug 'Raimondi/delimitMate'
 " 自动补全html/xml标签
@@ -126,7 +126,7 @@ Plug 'thinca/vim-quickrun'
 " fugitive
 Plug 'tpope/vim-fugitive'
 " gitgutter
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 
 " gundo
 " edit history, 可以查看回到某个历史状态
@@ -361,6 +361,7 @@ let g:ycm_filetype_blacklist = {
 " }}}
 
 " neocomplete {{{
+if has_key(g:plugs, 'neocomplete')
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
@@ -438,6 +439,7 @@ endif
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
+endif
 
 " }}}
 
