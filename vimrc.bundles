@@ -124,7 +124,7 @@ Plug 'thinca/vim-quickrun'
 
 " git
 " fugitive
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 " gitgutter
 " Plug 'airblade/vim-gitgutter'
 
@@ -338,7 +338,7 @@ let g:ycm_key_list_stop_completion = ['<CR>']
 let g:ycm_goto_buffer_command = 'horizontal-split'
 let g:ycm_register_as_syntastic_checker = 0
 " nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jj :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 
 " 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
