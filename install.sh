@@ -53,9 +53,17 @@ echo "If error,you need to compile it yourself"
 echo "cd $CURRENT_DIR/bundle/YouCompleteMe/ && python install.py --clang-completer"
 cd $CURRENT_DIR/bundle/YouCompleteMe/
 git submodule update --init --recursive
+
+# 使用文件中的clang去编译
+clang=$CURRENT_DIR/libclang.dylib
 if [ `which clang` ]   # check system clang
 then
-    python install.py --clang-completer --system-libclang   # use system clang
+    if [ `uname -s` = "Darwin" ]
+    then
+        EXTRA_CMAKE_ARGS="-DEXTERNAL_LIBCLANG_PATH=$clang" python install.py --clang-completer
+    else
+        python install.py --clang-completer --system-libclang   # use system clang
+    fi
 else
     python install.py --clang-completer
 fi
