@@ -566,7 +566,7 @@ nnoremap <C-y> 2<C-y>
 "nmap T O<ESC>j
 
 " Quickly close the current window
-nnoremap <leader>q :q<CR>
+" nnoremap <leader>q :q<CR>
 
 " Quickly save the current file
 nnoremap <leader>w :w<CR>
