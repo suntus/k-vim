@@ -347,10 +347,6 @@ nnoremap <leader>jj :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 
 " 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
-" old version
-if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-    let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
-endif
 " new version
 if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
     let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
@@ -616,6 +612,7 @@ nnoremap <leader>ff :CtrlSF<space>
 let g:ctrlsf_auto_close = 0
 let g:ctrlsf_confirm_save = 0
 let g:ctrlsf_ignore_dir = ["tags"]
+let g:ctrlsf_ackprg = 'ag'
 " Note: cannot use <CR> or <C-m> for open
 " Use : <sapce> or <tab>
 let g:ctrlsf_mapping = {
