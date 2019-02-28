@@ -97,7 +97,7 @@ Plug 'vim-scripts/matchit.zip'
 " Plug 'terryma/vim-expand-region'
 " 多光标选中编辑
 " multiplecursors
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
 
 " quick locate file or function
 " 文件搜索
