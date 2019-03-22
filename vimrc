@@ -529,8 +529,8 @@ endif
 " => 选中及操作改键
 
 " 调整缩进后自动选中，方便再次操作
-vnoremap < <gv
-vnoremap > >gv
+" vnoremap < <gv
+" vnoremap > >gv
 
 " y$ -> Y Make Y behave like other capitals
 map Y y$
